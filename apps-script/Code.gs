@@ -1,7 +1,10 @@
-// Google 시트에 바인딩된 Apps Script(확장 프로그램 > Apps Script)에 그대로 붙여넣으세요.
+// 대상 스프레드시트: https://docs.google.com/spreadsheets/d/10rNtp_Q2PJ1UN1m8BYo8nN4sHIPXTLoM2cHs1tLc7IM/edit
+// 이 시트를 열고 확장 프로그램 > Apps Script에서 아래 코드를 그대로 붙여넣으세요.
+const SPREADSHEET_ID = "10rNtp_Q2PJ1UN1m8BYo8nN4sHIPXTLoM2cHs1tLc7IM";
+
 function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("submissions")
-    || SpreadsheetApp.getActiveSpreadsheet().insertSheet("submissions");
+  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var sheet = ss.getSheetByName("submissions") || ss.insertSheet("submissions");
 
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(["timestamp", "name", "conspiracy", "received_at"]);
