@@ -1,6 +1,6 @@
 // Google Apps Script 웹앱 배포 후 발급되는 exec URL을 여기에 붙여넣으세요.
 // apps-script/Code.gs 참고, README.md의 "구글 시트 연동" 단계 참고.
-const GAS_URL = "YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GAS_URL = "https://script.google.com/macros/s/AKfycbxAFE8T7r8i_LfpLXwASw1QvnIE5vGIy_vPWrkdkiMy_oJyEeiDaBGjjuRcUEAIQ1xR/exec";
 
 document.getElementById("visitTimestamp").textContent = new Date()
   .toISOString()
